@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/css/CDACalendar.css">
+    <title>Calendario CDA 2025</title>
+  </head>
+  <body>
+    <div>
+        <form id="activityListForm" class="activityListStyle">
+            <div class="topButtonPanel">
+                <img class="prevent-select" id="CloseActivityForm" src="./settings/images/closeIcon.webp" width="24px">
+            </div>
+        <div class="activityFormContent">
+
+            <label>NOTAS  </label>
+            <label id="activityListTitle"></label>
+            <div>
+                <ul id="activityList" class="myActivityList" >
+                </ul>
+            </div>
+        </div>
+            <div class="cdaFooter">
+                <p>Brindamos soluciones tecnológicas que marcan la diferencia</p>
+            </div>
+        </form>
+    </div>
+    <div>
+        <form id="activityEditorForm" class="activityEditorForm">
+            <fieldset class="editorPanel" >
+                <legend style="padding: 10px 10px">Datos de Actividad</legend>
+                    <label for="cdaDateEditor">Fecha</label>
+                    <input class="input1" type="text" id="editorDate" name="cdaDateEditor"></input>
+                    <label for="cdaTimeEditor">Hora</label>
+                    <input class="input1" type="text" id="editorTime" name="cdaTimeEditor"></input><br>
+                    <label for="cdaActivityEditor">Definicion</label>
+                    <textarea class="input2" type="text" id="editorDefinition" name="cdaActivityEditor"></textarea>
+            </fieldset>
+            <div class="clearfix">
+                <button id="cancelActivityButton" type="button" class="cdaButton">Cancelar</button>
+                <button id="updateActivityButton" type="button" class="cdaButton">Actualizar</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <form id="settingsForm" class="settingsForm">
+            <div style="padding: 0px 0px 10px 0px">
+            <label>Pais</label>
+            <select id="countries" style="font-family: Myriad PRO; font-size:20px">
+                <option value="Argentina">Argentina</option>
+                <option value="España">España</option>
+                <option value="México">México</option>
+                <option value="Chile">Chile</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Perú">Perú</option>
+            </select>
+            </div>
+            <div style="padding: 0px 0px 10px 0px">
+                <label>Tema</label>
+                <select id="themes" style="font-family: Myriad PRO; font-size:20px">
+                </select>
+            </div>
+            <div style="padding: 0px 0px 10px 0px">
+                <div>
+                    <input type="radio" name="settingDisplay" id="setScreenBackground">Fondo de Pantalla</input>
+                </div>
+                <div>
+                    <input type="radio" name="settingDisplay" id="setScreenDesktop">Fondo de Escritorio</input>
+                </div>
+            </div>
+        </form>
+    </div>
+  <div class="bg-img">
+      <div class="container">
+          <div>
+              <div class="topButtonPanel prevent-select">
+                  <img class="prevent-select" src="./settings/images/minimizeIcon.png" width="32px">
+                  <img class="prevent-select" src="./settings/images/closeIcon.webp" width="32px">
+              </div>
+              <div>
+                  <div class="logoPanel prevent-select">
+                      <img id="settingsButton" src="./settings/images/settingsIcon.webp" width="32px">
+                  </div>
+                  <div class="logo prevent-select">
+                      <img src="./settings/images/cdaLogo.png" height="70px"/>
+                  </div>
+              </div>
+              <div>
+                  <table width="320px">
+                      <td width="10%" class="prevent-select date-selector-arrow"><label id="YearPrevious">&lt;</label></td>
+                      <td class="prevent-select date-selector"><label id="YearLabel"></label></td>
+    <!--                  <td width="10%" class="prevent-select date-selector-arrow"><label  id="YearNext">&gt;</label></td>
+                  </table>
+              </div>
+              <div>
+                  <table  style="padding: 0px 0px 15px 0px" width="320px">
+                      <td width="10%" class="prevent-select date-selector-arrow"><label  id="MonthPrevious">&lt;</label></td>-->
+                      <td class="prevent-select date-selector-bold"><label  id="MonthLabel"></label></td>
+                      <td width="10%" class="prevent-select date-selector-arrow" ><label id="MonthNext">&gt;</label></td>
+                  </table>
+              </div>
+              <div>
+                  <canvas id="Calendar" width="580" height="260"></canvas>
+              </div>
+              <div>
+                  <table id="HolidayTable" width="100%" height=70px>
+                      <td width="30%" class="holiday-bold"><label id="hlDate"></label></th>
+                      <td class="holiday"><label id="hlDateName"></label></td>
+                  </table>
+              </div>
+              <div class="buttonPanel prevent-select">
+                  <button id="ShowAllActivities" class="mainButton" >NOTAS</button>
+              </div>
+              <div>
+                <form id="bundledActivityForm" class="bundledActivityFormClass" >
+                    <ul id="activityListMini" class="miniActivityList">
+                    </ul>
+                    <div style="display: table-cell; vertical-align: middle; top:-50px">
+                    <img id="miniNewActivity" src="./src/blueAddIcon.png" width="32px"/>notas
+                    </div>
+                </form>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

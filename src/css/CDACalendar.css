@@ -1,0 +1,364 @@
+/* Evitar eventos de selección indeseados */
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.topButtonPanel 
+{
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    column-gap: 15px;
+    justify-content: right;
+    align-items: right;
+    opacity: 0.33;
+}
+
+.buttonPanel
+{
+    padding: 0px 0px 0px 20px;
+    display: flex;
+    column-gap: 5px;
+    justify-content: right;
+    align-items: right;
+    letter-spacing: 6px;
+    height:30px;
+}
+
+/* Set a style for the submit button */
+.mainButton {
+  text-align: "center";
+  font-family: "Myriad Pro";
+  font-size:24px;
+  font-weight: bold;
+  background-color: rgb(246,146,30);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 240px;
+  height: 36px;
+  letter-spacing: 6px;
+}
+
+.activityItem
+{
+    position: inline;
+    display: block;
+}
+
+.activityButtonPanel 
+{
+    display: flex;
+    column-gap: 5px;
+    justify-content: right;
+}
+
+.logoPanel{
+    width: auto;
+}
+.logo {
+    display:flex;
+    justify-content: right;
+    align-items: right;
+}
+.prevent-select {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.activityTable {
+  border-radius: 10px 10px 10px 10px;
+  width: 100%;
+  border: 2px solid rgb(0,125,196);
+  height: 480px;
+  overflow-y: scroll;
+  display: block;
+}
+ 
+.Calendar
+{
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;    
+}
+
+/* Selectores específicos */
+.date-selector-arrow
+{
+  font-family:"Myriad Pro";
+  font-size:18px;
+  font-weight: bold;
+  color:rgb(147,149,152);
+}
+
+.date-selector
+{
+  font-family:"Myriad Pro";
+  font-size:36px;
+  font-weight: normal;
+  letter-spacing: 10px;
+  color: rgb(0,125,196);
+  text-align: center;
+}
+
+.date-selector-bold
+{
+  font-family:"Myriad Pro";
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(0,125,196);
+  text-align: center;
+  letter-spacing: 7px;
+}
+
+.holiday {
+  font-family:"Myriad Pro";
+  font-size:24px;
+  font-weight: normal;
+  color: rgb(0,125,196);
+  vertical-align: top;
+  text-align:left;
+}
+
+.holiday-bold {
+  font-family:"Myriad Pro";
+  font-size:24px;
+  font-weight: bold;
+  color: rgb(0,125,196);
+  vertical-align: top;
+  text-align: left;
+}
+
+/* Full-width input fields */
+.editorPanel {
+  margin:5px 0px 10px 0px;
+}
+.activityCell
+{
+  width: 100%;
+  display: inline-block;
+}
+.cdaFooter{
+  font-family: "Myriad PRO";
+  font-size: 16px;
+  /*border-radius: 10px 10px;*/
+  height: 60px;
+  width: 100%;
+  background: rgb(0,125,196);
+  color: rgb(255,255,255);
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.input1 {
+  width: 35%;
+  padding: 3px;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: none;
+  background: #f0f0f0;
+}
+.input2{
+  width: 100%;
+  height: 100px;
+  padding: 0px;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: none;
+  background: #f0f0f0;
+  vertical-align: text-top;
+  font-family: "Myriad PRO";
+  font-size: "24px";
+}
+body, html {
+    height: 100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .bg-img {
+    /*min-height: 700px;*/ 
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .TheCalendar{
+    padding: 20px;
+    background-color: rgba(255,255,255);
+    opacity: 0.5;
+  }
+
+  .container {
+    height: 100%;
+    width: 650px;
+    /*border-radius: 20px;*/
+    opacity: 0.9;
+    font-family: "Myriad PRO";
+    font-size: 24px;
+    position: fixed;
+    right: 0;
+    margin: -10px;
+    background-color: rgb(255,255,255);
+    padding: 20px;
+  }
+
+
+
+  .cdaButton {
+    position:flex;
+    border: 0;
+    text-align: "center";
+    font-family: "Myriad Pro";
+    font-size:16px;
+    font-weight: normal;
+    background-color: rgb(246,146,30);
+    color: white;
+    padding: 3px;
+    width: 150px;
+    height: 30px;
+    margin-right:5px;
+    float:right;
+  }
+
+.settingsForm{
+  display: none;
+  background-color: rgb(255,255,255);
+  width:300px;
+  height:190px;
+  padding: 10px 10px 10px 10px;
+  font-family: "Myriad Pro";
+  font-size: 20px;
+  position:fixed;
+  right: 310px;
+  top: 65px;
+  border: 1px solid rgb(0,125,196);
+  z-index:1;
+}
+
+.activityForm{
+    display: none;
+    font-family: "Myriad Pro";
+    font-size: 18px;
+    position:fixed;
+    left: 25px;
+    top: 25px;
+    border: 1px solid rgb(0,125,196);
+    background-color: rgb(255,255,255);
+    z-index:1;
+}
+
+.activityFormContent {
+    padding: 20px;
+    width: 1400x;
+    top: 25px;
+    left: 25px;
+}
+.activityEditorForm {
+    display: none;
+    padding: 10px;
+    font-family: "Myriad Pro";
+    font-size: 18px;
+    position:fixed;
+    /*border-radius: 20px;*/
+    left: 25px;
+    top: 25px;
+    border: 1px solid rgb(0,125,196);
+    background-color: rgb(255,255,255);
+    z-index:2;
+}
+.activityEditCaption
+{
+  position: relative;
+  left:0px;
+  top:0px;
+}
+.activityEditButton
+{ 
+  position: relative;
+  align-self: right;
+}
+.activityRemoveButton
+{
+  position: inline-block;
+}
+.activityLi{
+  list-style-type: none;
+  padding: 0px 0px 10px 0px;
+  width: 400px;
+  display:block;
+}
+
+.myActivityList
+{
+  width: 1400px;
+  height: 600px;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis:400px;
+  flex-grow:0;
+  flex-shrink: 0;
+  column-gap:30px;
+  overflow-x: scroll;
+}
+
+.miniActivityList
+{
+  width: 600x;
+  height: 240px;
+  overflow-y: scroll;
+  font-family: "Myriad Pro";
+  font-size: 16px;
+}
+.bundledActivityFormClass
+{
+  display:none;
+}
+.activityListStyle{
+  display: none;
+  font-family: "Myriad Pro";
+  font-size: 18px;
+  position: fixed;
+  left: 25px;
+  top: 25px;
+  width: 1450px;
+  border: 1px solid rgb(0,125,196);
+  background-color: rgb(255,255,255);
+  z-index:1;
+}
+
+input {
+  font-family: "Myriad Pro";
+  font-size: 18px;
+
+}
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 20%;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.cdaInput {
+  font-family: "Myriad Pro";
+  font-weight: bold;
+  font-size: 20px;
+}
