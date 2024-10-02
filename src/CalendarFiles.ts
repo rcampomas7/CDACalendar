@@ -1,11 +1,11 @@
 //import { nodePolyfills } from "vite-plugin-node-polyfills";
-import { IActivityCollection } 
+import { IActivityCollection }
         from "./components/Activities/IActivityCollection";
-import { fs } from "fs";
+import { promises as fs } from "fs";
 
 export function LoadActivities(AFileName:string,AActivityCollection:IActivityCollection)
 {
-    let data;//readFileSync(AFileName);
+    const data = fs.readFile(AFileName);
     if (data)
     {
         let items=JSON.parse(data.toString());
@@ -61,7 +61,7 @@ function loadFile(AFileName)
     try
     {
         data=null;//readFileSync(AFileName,'utf8');
-    } 
+    }
     catch(error)
     {
         console.log(error);
