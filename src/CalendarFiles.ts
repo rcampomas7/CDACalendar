@@ -1,7 +1,7 @@
 //import { nodePolyfills } from "vite-plugin-node-polyfills";
 import { IActivityCollection }
         from "./components/Activities/IActivityCollection";
-import { promises as fs } from "fs";
+import fs from 'vite-plugin-fs/browser';
 
 export function LoadActivities(AFileName:string,AActivityCollection:IActivityCollection)
 {
@@ -27,14 +27,6 @@ export function LoadActivities(AFileName:string,AActivityCollection:IActivityCol
     }
 }
 
-export function SaveActivities(AActivityCollection:IActivityCollection)
-{
-    // Actualización de archivo de actividades.
-    let data=AActivityCollection.FullList;
-    let content=JSON.stringify(data,null,2);
-    saveFile("./test.json",content);
-}
-
 function saveFile(AFileName,AContent)
 {
     // Escribe un archivo en HDD local..
@@ -42,7 +34,8 @@ function saveFile(AFileName,AContent)
     // Cambios en configuración.
     try
     {
-        //writeFileSync(AFileName,AContent);
+        console.log('Saving file: '+AFileName);
+        fs.writeFile(AFileName,AContent);
         return true;
     }
     catch(error)
@@ -68,4 +61,13 @@ function loadFile(AFileName)
         data=null;
     }
     return data;
+}
+
+export function SaveActivities(AActivityCollection:IActivityCollection)
+{
+    // Actualización de archivo de actividades.
+    let data=AActivityCollection.FullList;
+    let content=JSON.stringify(data,null,2);
+    saveFile("./test.json",content);
+    console.log('Activities saved.');
 }
